@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2747" />
+  <meta name="description" content="Advanced CRM for Pawar Enterprises" />
+  <title>Pawar Enterprises CRM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PE</div>
+        <div><strong>Pawar Enterprises</strong><span>Advanced CRM</span></div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span>Dashboard</button>
+        <button class="nav-item" data-view="leads"><span>◉</span>Leads</button>
+        <button class="nav-item" data-view="pipeline"><span>▥</span>Sales Pipeline</button>
+        <button class="nav-item" data-view="clients"><span>◎</span>Clients</button>
+        <button class="nav-item" data-view="followups"><span>◷</span>Follow-ups</button>
+        <button class="nav-item" data-view="quotations"><span>₹</span>Quotations</button>
+        <button class="nav-item" data-view="projects"><span>▣</span>Projects</button>
+        <button class="nav-item" data-view="payments"><span>◈</span>Payments</button>
+        <button class="nav-item" data-view="tasks"><span>✓</span>Tasks</button>
+        <button class="nav-item" data-view="team"><span>♟</span>Team</button>
+        <button class="nav-item" data-view="reports"><span>⌁</span>Reports</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Settings</button>
+      </nav>
+
+      <div class="sidebar-links">
+        <a href="https://pawar-enterprises.onrender.com" target="_blank" rel="noreferrer">Open Website ↗</a>
+        <a href="https://pawar-enterprises-letterpad.onrender.com" target="_blank" rel="noreferrer">Open Letter Pad ↗</a>
+      </div>
+      <div class="user-card">
+        <div class="avatar">A</div>
+        <div><strong>Admin</strong><span>Owner access</span></div>
+        <button id="themeBtn" title="Toggle theme">◐</button>
+      </div>
+    </aside>
+
+    <section class="main-shell">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn">☰</button>
+        <div class="page-heading"><span id="pageEyebrow">Overview</span><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="top-actions">
+          <div class="search-wrap"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search leads, clients, projects..." /></div>
+          <button class="icon-action" id="notifyBtn" title="Upcoming follow-ups">🔔<b id="notifyCount">0</b></button>
+          <button class="primary-action" id="quickAddBtn">+ Quick Add</button>
+        </div>
+      </header>
+      <main class="content" id="content"></main>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal">
+      <div class="modal-head"><div><span class="eyebrow" id="modalEyebrow">CREATE</span><h2 id="modalTitle">New item</h2></div><button class="modal-close" id="modalClose">×</button></div>
+      <form id="modalForm"><div class="modal-body" id="modalBody"></div><div class="modal-footer"><button type="button" class="btn secondary" id="modalCancel">Cancel</button><button type="submit" class="btn primary" id="modalSave">Save</button></div></form>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden><aside class="drawer" id="drawer"></aside></div>
+  <div class="toast-stack" id="toastStack"></div>
+  <input type="file" id="importFile" accept="application/json" hidden />
+  <script src="assets/app.js"></script>
+</body>
+</html>
